@@ -27,11 +27,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/USERNAME/dsh-voice-fish.git"
+    "url": "https://github.com/luojuee/dsh-voice-fish.git"
   },
-  "homepage": "https://github.com/USERNAME/dsh-voice-fish#readme",
+  "homepage": "https://github.com/luojuee/dsh-voice-fish#readme",
   "bugs": {
-    "url": "https://github.com/USERNAME/dsh-voice-fish/issues"
+    "url": "https://github.com/luojuee/dsh-voice-fish/issues"
   },
   "author": "liuyifei",
   "dsh": {

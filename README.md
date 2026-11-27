@@ -35,10 +35,10 @@
 
 ```bash
 # 方式一：直接从 GitHub 装
-dsh plugin --profile desktop add github:USERNAME/dsh-voice-fish
+dsh plugin --profile desktop add github:luojuee/dsh-voice-fish
 
 # 方式二：克隆下来再 link（改代码方便）
-git clone https://github.com/USERNAME/dsh-voice-fish.git
+git clone https://github.com/luojuee/dsh-voice-fish.git
 dsh plugin --profile desktop add link:<克隆下来的目录>
 ```
 
