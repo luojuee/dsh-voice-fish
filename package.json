@@ -1,0 +1,48 @@
+{
+  "name": "dsh-voice-fish",
+  "version": "0.3.0",
+  "description": "让 DSH 里的 AI 开口说话：Edge 神经音色/朗读桥/系统语音三选一，音色自选，收尾念结果概括。",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./src/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "tts",
+    "edge-tts",
+    "text-to-speech",
+    "voice"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/USERNAME/dsh-voice-fish.git"
+  },
+  "homepage": "https://github.com/USERNAME/dsh-voice-fish#readme",
+  "bugs": {
+    "url": "https://github.com/USERNAME/dsh-voice-fish/issues"
+  },
+  "author": "liuyifei",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": ["slots"],
+      "external": ["react"]
+    }
+  },
+  "license": "MIT"
+}

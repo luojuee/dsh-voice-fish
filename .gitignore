@@ -1,0 +1,13 @@
+# 依赖
+node_modules/
+
+# 运行时数据（插件自己写在 %LOCALAPPDATA%\dsh-voice-fish，不该进仓库）
+*.log
+state.json
+seen-sessions.json
+voices-cache.json
+
+# 系统杂项
+.DS_Store
+Thumbs.db
+desktop.ini

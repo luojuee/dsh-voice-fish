@@ -1,0 +1,47 @@
+# dsh-voice-fish — 让大肥鱼会说话
+#
+# 本地插件（link 安装），DSH 启动时插入 profile 的配置树。
+# `name:` 必须与包名完全一致（dsh-voice-fish）。
+#
+# 声音有三个来源（engine 选）：
+#   edge   → 微软神经音色（默认）。本机直接合成，音色由 edgeVoice 决定。
+#   bridge → 朗读桥（DeepSeek 网页端的声音），要把话 POST 到
+#            http://127.0.0.1:<DSH 端口>/dsh-tts-bridge/say
+#   sapi   → Windows 系统语音（Huihui），兜底用
+#   auto   → 桥 → edge → sapi 挨个试
+#
+# 改音色不用改这个文件：DSH 设置 →「大肥鱼的声音」里点选、试听、保存。
+# 即时覆盖仍可写 %LOCALAPPDATA%\dsh-voice-fish\state.json，优先于这里。
+
+- insert:
+    - id: dsh-voice-fish
+      name: dsh-voice-fish
+      config:
+        enabled: true
+        # 鱼鱼怎么称呼你
+        ownerName: 菲
+        engine: edge
+        # 默认嗓子：晓伊（活泼俏皮的小姑娘）
+        edgeVoice: zh-CN-XiaoyiNeural
+        edgeRate: 5
+        edgePitch: 12
+        # 系统语音（仅兜底）
+        voice: Microsoft Huihui Desktop
+        rate: 0
+        volume: 100
+        states:
+          - SUCCESS
+          - ERROR
+          - APPROVAL
+        greeting: true
+        # 每轮开始思考时先说一句「让我思考一下~」
+        thinking: true
+        # 每轮完成时把这一轮的「结果概括」念出来（代码/路径会跳过）
+        readSummary: true
+        summaryMaxChars: 80
+        skipSuccessWhenBridgeAuto: true
+        # 关掉朗读桥的「自动朗读」：它会把整段回复连代码一起念出来
+        # 改由本插件念一句短的人话（简单、生动、不含代码）
+        bridgeAutoRead: false
+        # 新会话自动加进朗读桥的「听谁」：默认关闭（太频繁）
+        autoWatch: false
